@@ -555,6 +555,8 @@ var TipoCambio, Promise;
 		$(document).ready(function(){
 			TipoCambio.loadDay(today).then(function(){
 				$('[data-toogle="TipoCambio"]').TipoCambio();
+				
+				$(document).trigger('TC.loaded'); // Async Loaded
 			});
 		});
 		return TipoCambio;
