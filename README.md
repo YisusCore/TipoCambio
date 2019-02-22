@@ -2,7 +2,39 @@
 
 Permite cambiar un monto de una moneda a otra moneda
 
-<br>
+### Archivos JS: 
+```html
+// * Considerando parámetro [DÍA ACTUAL] como un directorio con la fecha en formato yyyy-mm-dd (eg: 2019-02-20)
+
+//==================================================
+// Archivos Minificados (Básico: 6kb, Full: 17kb)
+//==================================================
+
+// Retorna solo las monedas básicas (PEN, USD, EUR)
+<script src="https://api.jys.pe/tipo-cambio/<b>[DÍA ACTUAL]</b>/script.min.js"></script>
+
+// Retorna todas las monedas que se recoleta la información diaria
+<script src="https://api.jys.pe/tipo-cambio/<b>[DÍA ACTUAL]</b>/script.full.min.js"></script>
+
+//==================================================
+// Archivos Sin Minificar (Básico: 13kb, Full: 36kb)
+//==================================================
+
+<script src="https://api.jys.pe/tipo-cambio/[DÍA ACTUAL]/script.js"></script>
+<script src="https://api.jys.pe/tipo-cambio/[DÍA ACTUAL]/script.full.js"></script>
+
+// Si no se envía el parametro [DÍA ACTUAL], la información se retorna del día actual automáticamente
+// y debido a que varía diarimente es recomendable enviar un parametro para que el archivo 
+// se almacene en cache solo por ese día tal como script.full.min.js?20190222
+
+<script src="https://api.jys.pe/tipo-cambio/script.min.js"></script>
+<script src="https://api.jys.pe/tipo-cambio/script.full.min.js"></script>
+
+<script src="https://api.jys.pe/tipo-cambio/script.js"></script>
+<script src="https://api.jys.pe/tipo-cambio/script.full.js"></script>
+```
+
+## Uso del Script
 
 ### Ejemplos
 
