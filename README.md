@@ -92,7 +92,7 @@ var TC = new TipoCambio();
 
 10.- Usando objetos *JQuery*
 
-> El valor resultante de la conversión varía automáticamente al modificar el día y la moneda
+> El valor resultante de la conversión varía automáticamente al modificar el día y la moneda de la instancia **TipoCambio**
 
 ```js
 /**
@@ -111,6 +111,20 @@ var TC = new TipoCambio();
  * - Atributo de obj: data-moneda
  * - Atributo de obj: data-currencie
  * - Atributo de obj: data-from
+ *
+ * Se prioriza la cantidad de decimales a poner en el sgte. orden:
+ * - Atributo de obj: data-dec
+ * - Atributo de obj: data-decimals
+ * - Atributo de obj: data-decimales
+ *
+ * Se prioriza el signo de los miles a poner en el sgte. orden:
+ * - Atributo de obj: data-mil
+ * - Atributo de obj: data-million
+ * - Atributo de obj: data-millions
+ *
+ * Se prioriza la instancia TC en el sgte. orden:
+ * - El parametro TC
+ * - Función Global TipoCambio
  */
 $('[data-toogle="TipoCambio"]').TipoCambio();
 ```
