@@ -193,8 +193,8 @@ var TipoCambio, Promise;
 						throw 'To needs to be a valid money code or a date';
 					}
 					
-					let Xday =  isDay(to) ? to : $this.day;
-					let Xto  =  isValidCode(to) ? to : $this.moneda;
+					var Xday =  isDay(to) ? to : $this.day;
+					var Xto  =  isValidCode(to) ? to : $this.moneda;
 					
 					
 					return $this.Convert(val, from, Xto, Xday);
@@ -296,8 +296,8 @@ var TipoCambio, Promise;
 			{
 				val = (val.toString() + '.').split('.', 3);
 				
-				let ent = val[0];
-				let dec = val[1];
+				var ent = val[0];
+				var dec = val[1];
 				
 				var i;
 				for(i = dec.length; i < decimals; i++)
@@ -307,10 +307,10 @@ var TipoCambio, Promise;
 
 				if (millions !== '')
 				{
-					let ent_ = [];
+					var ent_ = [];
 					ent = ent.toString();
 
-					let ent_l = ent.length,
+					var ent_l = ent.length,
 						part,
 						ent_lk;
 
