@@ -389,7 +389,7 @@ var TipoCambio, Promise;
 			if (typeof DaysPromises[day] === 'undefined')
 			{
 				DaysPromises[day] = new Promise(function(resolve, reject){
-					if (typeof currencies['PEN']['rates'][day] !== 'undefined')
+					if (typeof currencies.PEN.rates[day] !== 'undefined')
 					{
 						resolve();
 						return;
