@@ -23,7 +23,10 @@ Permite cambiar un monto de una moneda a otra moneda
 <script src="https://api.jys.pe/tipo-cambio/[DÍA ACTUAL]/script.js"></script>
 <script src="https://api.jys.pe/tipo-cambio/[DÍA ACTUAL]/script.full.js"></script>
 
-// Si no se envía el parametro [DÍA ACTUAL], la información se retorna del día actual automáticamente
+//==================================================
+// Si no se envía el parametro [DÍA ACTUAL]
+//==================================================
+// La información se retorna del día actual automáticamente
 // y debido a que varía diarimente es recomendable enviar un parametro para que el archivo 
 // se almacene en cache solo por ese día tal como script.full.min.js?20190222
 
@@ -32,6 +35,18 @@ Permite cambiar un monto de una moneda a otra moneda
 
 <script src="https://api.jys.pe/tipo-cambio/script.js"></script>
 <script src="https://api.jys.pe/tipo-cambio/script.full.js"></script>
+```
+
+//==================================================
+// Parametro [DÍA ACTUAL] = 'today'
+//==================================================
+// La información se redirecciona la script del día actual automáticamente
+
+<script src="https://api.jys.pe/tipo-cambio/today/script.min.js"></script>
+<script src="https://api.jys.pe/tipo-cambio/today/script.full.min.js"></script>
+
+<script src="https://api.jys.pe/tipo-cambio/today/script.js"></script>
+<script src="https://api.jys.pe/tipo-cambio/today/script.full.js"></script>
 ```
 
 ## Uso del Script
