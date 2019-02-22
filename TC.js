@@ -388,7 +388,13 @@ var TipoCambio, Promise;
 		{
 			if (typeof DaysPromises[day] === 'undefined')
 			{
-				DaysPromises[day] = new Promise(function(resolve){
+				DaysPromises[day] = new Promise(function(resolve, reject){
+					if (typeof currencies['PEN']['rates'][day] !== 'undefined')
+					{
+						resolve();
+						return;
+					}
+
 					$.getJSON('https://api.jys.pe/tipo-cambio/' + day + '/rates.json')
 					.done(function(rates){
 						$.each(rates, function(code, rate){
@@ -401,6 +407,9 @@ var TipoCambio, Promise;
 						});
 
 						resolve();
+					})
+					.fail(function(){
+						reject();
 					});
 				});
 			}
