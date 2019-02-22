@@ -35,7 +35,6 @@ Permite cambiar un monto de una moneda a otra moneda
 
 <script src="https://api.jys.pe/tipo-cambio/script.js"></script>
 <script src="https://api.jys.pe/tipo-cambio/script.full.js"></script>
-```
 
 //==================================================
 // Parametro [DÍA ACTUAL] = 'today'
